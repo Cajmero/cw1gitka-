@@ -9,89 +9,88 @@ h1 {
 	font-family: sans-serif;
 }
 
-.wrapper {
-	display: flex;
-	flex-flow: row wrap;
-	font-weight: bold;
-	text-align: center;
-}
-
-.wrapper > * {
-	padding: 10px;
-	flex: 1 100%;
-}
-
 .header {
-	background: #a2cf6e;
-	text-transform: uppercase;
 	display: flex;
-	align-content: space-between;
-	text-align: right;
+	justify-content: space-between;
+	background-color: #a2cf6e;
 }
-
 
 .logo {
-	width: 100px;
-	height: 100px;
-	margin-top: 10px;
+	max-width: 100px;
 }
 
+.menu {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+	max-width: 200px;
+}
+.menu-item {
+	margin-left: 10px;
+}
+
+.container {
+	display: flex;
+}
+
+.container2 {
+	display: flex;
+	flex-direction: row;
+}
+
+.left-sidebar {
+	width: 25%;
+	height: 200px;
+	background-color: #009688;
+}
+
+.content {
+	width: 50%;
+	height: 200px;
+	background-color: #ffc107;
+}
+.content2 {
+	width: 50%;
+	height: 200px;
+	background-color: #fff;
+}
+
+.right-sidebar {
+	width: 25%;
+	height: 200px;
+	background-color: #2196f3;
+}
 
 .footer {
-	background: #673ab7;
-	height: 150px;
+	width: 50%;
+	height: 120px;
+	background-color: #0e7fa9;
 }
 
-.main {
-	text-align: left;
-	background: #ffc107;
-	height: 200px;
+.footer2 {
+	width: 50%;
+	height: 120px;
+	background-color: #996fe0;
 }
 
-.aside-1 {
-	background: #009688;
+.flex-parent {
+	display: flex;
+	justify-content: flex-start;
+	border: 2px solid white;
 }
 
-.aside-2 {
-	background: #2196f3;
-}
-
-@media all and (min-width: 600px) {
-	.aside {
-		flex: 1 0 0;
+@media screen and (max-width: 768px) {
+	.header,
+	.menu,
+	.container {
+		flex-direction: column;
+		align-items: center;
 	}
-}
 
-@media all and (min-width: 800px) {
-	.main {
-		flex: 3 0px;
+	.left-sidebar,
+	.content,
+	.right-sidebar {
+		width: 100%;
 	}
-	.aside-1 {
-		order: 1;
-	}
-	.main {
-		order: 2;
-	}
-	.aside-2 {
-		order: 3;
-	}
-	.footer {
-		order: 4;
-	}
-}
-
-
-
-colors {
-	background-color: #a2cf6e;
-	background-color: #009688;
-	background-color: #ffc107;
-	background-color: #2196f3;
-	background-color: #673ab7;
-}
-
-.done {
-	margin-top: 100px;
-	padding: 0;
-	max-width: 100%;
 }
